@@ -25,7 +25,7 @@ targets:
       host: https://dbc-325dd65c-6716.cloud.databricks.com
 
   staging:
-    mode: staging
+    mode: production
     workspace:
       host: https://dbc-325dd65c-6716.cloud.databricks.com
       # We explicitly deploy to /Workspace/Users/himanshu.gupta@databricks.com to make sure we only have a single copy.
