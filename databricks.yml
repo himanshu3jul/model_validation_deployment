@@ -4,6 +4,16 @@ bundle:
   name: mlops_validation_job
   uuid: f1696099-d686-46be-8379-e52cffbfbdcb
 
+variables:
+  source_catalog:
+    description: Source catalog for the model
+  model_name:
+    Name of the model to deploy
+  source_db:
+    Source db of the model
+  validation_data:
+    Validation Data for the model
+
 include:
   - resources/*.yml
 
@@ -16,18 +26,18 @@ targets:
     mode: development
     default: true
     variables:
-      catalog_name: mlops_dev
+      source_catalog: mlops_dev
     workspace:
       host: https://dbc-325dd65c-6716.cloud.databricks.com
 
   Stage:
-    mode: Staging
+    mode: staging
     workspace:
       host: https://dbc-325dd65c-6716.cloud.databricks.com
       # We explicitly deploy to /Workspace/Users/himanshu.gupta@databricks.com to make sure we only have a single copy.
       root_path: /Workspace/Users/himanshu.gupta@databricks.com/stage/.bundle/${bundle.name}/${bundle.target}
     variables:
-      catalog_name: mlops_stage
+      source_catalog: mlops_stage
     permissions:
       - user_name: jiayi.wu@databricks.com
         level: CAN_MANAGE
@@ -39,7 +49,7 @@ targets:
       # We explicitly deploy to /Workspace/Users/himanshu.gupta@databricks.com to make sure we only have a single copy.
       root_path: /Workspace/Users/himanshu.gupta@databricks.com/prod/.bundle/${bundle.name}/${bundle.target}
     variables:
-      catalog_name: mlops_prod
+      source_catalog: mlops_prod
     permissions:
       - user_name: himanshu.gupta@databricks.com
         level: CAN_MANAGE
