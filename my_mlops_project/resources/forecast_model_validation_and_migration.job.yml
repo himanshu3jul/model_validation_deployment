@@ -14,7 +14,7 @@ resources:
         - name: model_name
           default: interest_forecast_7_day
         - name: source_catalog
-          default: mlops_dev
+          default: ${source_catalog}
         - name: source_db
           default: interest_forecast
         - name: validation_data
