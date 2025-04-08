@@ -16,7 +16,7 @@ defaults:
 
 env:
   DATABRICKS_HOST: https://dbc-325dd65c-6716.cloud.databricks.com
-  DATABRICKS_TOKEN: ${{secrets.DATABRICKS}}
+  DATABRICKS_TOKEN: ${{secrets.DATABRICKS_TOKEN}}
 
 jobs:
   staging:
