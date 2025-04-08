@@ -7,12 +7,6 @@ bundle:
 variables:
   source_catalog:
     description: Source catalog for the model
-  model_name:
-    Name of the model to deploy
-  source_db:
-    Source db of the model
-  validation_data:
-    Validation Data for the model
 
 include:
   - resources/*.yml
