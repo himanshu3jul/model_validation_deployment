@@ -15,7 +15,7 @@ defaults:
     working-directory: ./my_mlops_project
 
 env:
-  DATABRICKS_TOKEN: ${{ secrets.DATABRICKS }}
+  DATABRICKS_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
 
 jobs:
   staging:
