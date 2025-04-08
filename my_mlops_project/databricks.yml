@@ -30,7 +30,7 @@ targets:
     workspace:
       host: https://dbc-325dd65c-6716.cloud.databricks.com
 
-  Stage:
+  staging:
     mode: staging
     workspace:
       host: https://dbc-325dd65c-6716.cloud.databricks.com
