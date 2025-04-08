@@ -20,6 +20,8 @@ resources:
         - name: validation_data
           default: validation_table
       email_notifications: {}
+      run_as:
+        user_name: himanshu.gupta@databricks.com
       git_source:
         git_branch: main
         git_provider: gitHub
