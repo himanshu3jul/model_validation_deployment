@@ -25,6 +25,8 @@ targets:
     default: true
     variables:
       source_catalog: mlops_dev
+      target_catalog: mlops_stage
+      branch: main
     workspace:
       host: https://dbc-325dd65c-6716.cloud.databricks.com
 
