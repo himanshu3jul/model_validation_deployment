@@ -7,6 +7,8 @@ bundle:
 variables:
   source_catalog:
     description: Source catalog for the model
+  target_catalog:
+    description: Source catalog for the model
 
 include:
   - resources/*.yml
@@ -31,7 +33,8 @@ targets:
       # We explicitly deploy to /Workspace/Users/himanshu.gupta@databricks.com to make sure we only have a single copy.
       root_path: /Workspace/Users/himanshu.gupta@databricks.com/stage/.bundle/${bundle.name}/${bundle.target}
     variables:
-      source_catalog: mlops_stage
+      source_catalog: mlops_dev
+      target_catalog: mlops_stage
     permissions:
       - user_name: jiayi.wu@databricks.com
         level: CAN_MANAGE
@@ -43,7 +46,8 @@ targets:
       # We explicitly deploy to /Workspace/Users/himanshu.gupta@databricks.com to make sure we only have a single copy.
       root_path: /Workspace/Users/himanshu.gupta@databricks.com/prod/.bundle/${bundle.name}/${bundle.target}
     variables:
-      source_catalog: mlops_prod
+      source_catalog: mlops_stage
+      target_catalog: mlops_prod
     permissions:
       - user_name: himanshu.gupta@databricks.com
         level: CAN_MANAGE
