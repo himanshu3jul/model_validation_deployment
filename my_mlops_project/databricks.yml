@@ -9,6 +9,8 @@ variables:
     description: Source catalog for the model
   target_catalog:
     description: Source catalog for the model
+  branch:
+    project branch to use in the code
 
 include:
   - resources/*.yml
@@ -35,6 +37,7 @@ targets:
     variables:
       source_catalog: mlops_dev
       target_catalog: mlops_stage
+      branch: main
     permissions:
       - user_name: jiayi.wu@databricks.com
         level: CAN_MANAGE
@@ -48,6 +51,7 @@ targets:
     variables:
       source_catalog: mlops_stage
       target_catalog: mlops_prod
+      branch: release
     permissions:
       - user_name: jiayi.wu@databricks.com
         level: CAN_MANAGE
