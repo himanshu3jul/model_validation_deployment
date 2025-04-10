@@ -27,7 +27,7 @@ resources:
       run_as:
         user_name: himanshu.gupta@databricks.com
       git_source:
-        git_branch: ${var.branch}
+        git_branch: ${var.branch_name}
         git_provider: gitHub
         git_url: https://github.com/himanshu3jul/model_validation_deployment
       max_concurrent_runs: 1
