@@ -13,17 +13,21 @@ resources:
       parameters:
         - name: model_name
           default: interest_forecast_7_day
+        - name: model_version
+          default: 1
         - name: source_catalog
           default: ${var.source_catalog}
         - name: source_db
           default: interest_forecast
         - name: validation_data
           default: validation_table
+        - name: target_catalog
+          default: ${var.target_catalog}
       email_notifications: {}
       run_as:
         user_name: himanshu.gupta@databricks.com
       git_source:
-        git_branch: main
+        git_branch: ${var.branch_name}
         git_provider: gitHub
         git_url: https://github.com/himanshu3jul/model_validation_deployment
       max_concurrent_runs: 1
