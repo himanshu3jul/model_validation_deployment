@@ -10,7 +10,7 @@ variables:
   target_catalog:
     description: Source catalog for the model
   branch_name:
-    project branch to use in the code
+    description: project branch to use in the code
 
 include:
   - resources/*.yml
