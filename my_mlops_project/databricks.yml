@@ -49,5 +49,5 @@ targets:
       source_catalog: mlops_stage
       target_catalog: mlops_prod
     permissions:
-      - user_name: himanshu.gupta@databricks.com
+      - user_name: jiayi.wu@databricks.com
         level: CAN_MANAGE
