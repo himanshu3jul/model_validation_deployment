@@ -9,7 +9,7 @@ variables:
     description: Source catalog for the model
   target_catalog:
     description: Source catalog for the model
-  branch:
+  branch_name:
     project branch to use in the code
 
 include:
@@ -26,7 +26,7 @@ targets:
     variables:
       source_catalog: mlops_dev
       target_catalog: mlops_stage
-      branch: main
+      branch_name: main
     workspace:
       host: https://dbc-325dd65c-6716.cloud.databricks.com
 
@@ -39,7 +39,7 @@ targets:
     variables:
       source_catalog: mlops_dev
       target_catalog: mlops_stage
-      branch: main
+      branch_name: main
     permissions:
       - user_name: jiayi.wu@databricks.com
         level: CAN_MANAGE
@@ -53,7 +53,7 @@ targets:
     variables:
       source_catalog: mlops_stage
       target_catalog: mlops_prod
-      branch: release
+      branch_name: release
     permissions:
       - user_name: jiayi.wu@databricks.com
         level: CAN_MANAGE
