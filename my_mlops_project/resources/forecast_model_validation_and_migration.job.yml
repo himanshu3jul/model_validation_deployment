@@ -15,8 +15,6 @@ resources:
           default: interest_forecast_7_day
         - name: model_version
           default: 1
-        - name: source_catalog
-          default: ${var.source_catalog}
         - name: source_db
           default: interest_forecast
         - name: validation_data
